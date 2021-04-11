@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulation Gray Card's</title>
+</head>
+<body>
+    <form id="form">
+        <h1>Simulateur Carte grise</h1>
+        <div>
+            <label for="locality-dropdown">Region</label>
+            <select id="locality-dropdown" name="locality"></select>
+        </div>
+        <div>
+            <p>Votre véhicule a t-il plus de 10 ans ?</p>
+            <div>
+                <input type="radio" id="true" name="10ans" value="true"
+                       checked>
+                <label for="true">Oui</label>
+            </div>
+            <div>
+                <input type="radio" id="false" name="10ans" value="false">
+                <label for="true">Non</label>
+            </div>
+        </div>
+        <div>
+            <label for="energy-dropdown">Energie du véhicule</label>
+            <select id="energy-dropdown" name="energie">
+                <option value="2">Gazole</option>
+                <option value="2">Essence</option>
+                <option value="0">Gazole</option>
+                <option value="0">Gazole</option>
+            </select>
+        </div>
+        <div>
+            <label for="type-vehicule-dropdown">Type de véhicule</label>
+            <select id="type-vehicule-dropdown" name="type">
+                <option value="voiture_particuliere">Voiture particulière, tricycle à moteur, camionnette</option><option value="moto_2_roues_de_plus_de_125_cm3">Moto (2 roues) de plus de 125 cm3</option>
+                <option value="moto_2_roues_de_moins_de_125_cm3">Moto (2 roues) de moins de 125 cm3</option>
+                <option value="cyclomoteur_a_2_roues">Cyclomoteur à 2 roues ou à 3 roues non carrossé (scooter de 50 cm3 par exemple)</option>
+                <option value="utilitaire">Utilitaire, véhicule de société CTTE</option>
+            </select>
+        </div>
+        <div>
+            <label for="PTAC-dropdown">PTAC</label>
+            <select id="PTAC-dropdown" name="PTAC">
+                <option value="0" selected>Choisir</option>
+                <option value="34">Inférieur ou égal à 3,5 tonnes</option>
+                <option value="127">Entre 3,5 et 6 tonnes</option>
+                <option value="189">Entre 6 et à 11 tonnes</option>
+                <option value="285">Supérieur à 11 tonnes ou véhicule de transport en commun</option>
+            </select>
+        </div>
+        <div>
+            <label for="puissance-cv">CV</label>
+            <input id="puissance-cv" type="number">
+        </div>
+        <input type="submit" value="Simuler">
+    </form>
+    <div style="border: solid 1px black; border-radius: 5px; width: fit-content; padding: 3px">
+        <span id="result" style="font-size: 14px">0$</span>
+    </div>
+    <script src="script.js"></script>
+    <script src="simulation.js"></script>
+</body>
+</html>
